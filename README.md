@@ -3,4 +3,5 @@
 
 ### Categories
 #### [Airflow](Airflow)
-- [Quick start](/airflow/airflow_tutorial.md)
+- [Quick start](/airflow/airflow_quickstart.md)
+- [Basic](/airflow/airflow_basic.md)
