@@ -9,7 +9,7 @@ Apache Airflow is an open-source platform for developing, scheduling, and monito
 
 <p align="left"><img src=https://raw.githubusercontent.com/hyeongyuu/TIL/main/images/airflow/airflow_architecture.png></p>
 
-- Airflow workflow는 DAG(Directed Acyclic Graph)로 나타내며, Task로 불리는 개별 작업을 포함, DAG는 각 Task의 dependency와 data flow를 고려하여 작성
+- Airflow workflow는 DAG(Directed Acyclic Graph)로 나타내며 개별 Task를 포함, DAG는 각 Task의 dependency와 data flow를 고려하여 작성
 - Scheduler로 workflow를 트리거하여 실행할 Task를 Worker로 전달, Excuter는 Worker가 전달받은 Task를 실행하는 주체
 - Webserver. 편리한 inspect, trigger, debug를 위한 웹 UI 서버
 - Metadata Database. Scheduler, Executor, Webserver 상태 저장을 위한 database
