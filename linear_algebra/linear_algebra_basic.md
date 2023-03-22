@@ -27,9 +27,9 @@ $(A^TA)^T = A^TA$
 - $a \cdot b<0$ 일 필요충분조건은 $\measuredangle(\mathbf {a},\mathbf {b})>90^{\circ}$ 이다.
 
 
-$a = \begin{bmatrix} 1 \\ 3 \end{bmatrix}, b = \begin{bmatrix} 5 \\ 1 \end{bmatrix}$  
+$$a = \begin{bmatrix} 1 \\ 3 \end{bmatrix}, b = \begin{bmatrix} 5 \\ 1 \end{bmatrix}$$  
+$$a \cdot b = 8 = a^Tb = b^Ta$$
 
-$a \cdot b = 8 = a^Tb = b^Ta$
 
 $a^Tb = \begin{Vmatrix}a\\\end{Vmatrix} \cdot \begin{Vmatrix}b\\\end{Vmatrix} \cdot cos\theta$  
 $a^Tb = \begin{Vmatrix}a\\\end{Vmatrix} \cdot cos\theta \cdot \begin{Vmatrix}b\\\end{Vmatrix}$  
