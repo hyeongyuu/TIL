@@ -22,13 +22,12 @@ $(A^TA)^T = A^TA$
 벡터에는 방향이 있으므로, 방향이 일치하는 만큼만 곱한다. 예를 들어 두 벡터의 방향이 같으면, 두 벡터의 크기를 그냥 곱한다. **두 벡터가 이루는 각이 90도일 땐, 일치하는 정도가 전혀 없기 때문에 내적의 값은 0이다.** 내적은 한 벡터를 다른 벡터로 정사영 시켜서, 그 벡터의 크기를 곱한다.  
 
 
-
 - $a \cdot b=0$ 일 필요충분조건은 $a \perp b$ 이다.
 - $a \cdot b>0$ 일 필요충분조건은 $\measuredangle(\mathbf {a},\mathbf {b})<90^{\circ}$ 이다.
 - $a \cdot b<0$ 일 필요충분조건은 $\measuredangle(\mathbf {a},\mathbf {b})>90^{\circ}$ 이다.
 
 
-$a = \begin{bmatrix}1\\3\\ \end{bmatrix}$,  $b = \begin{bmatrix}5\\1\\ \end{bmatrix}$
+$a = \begin{bmatrix} 1 \\ 3 \end{bmatrix}, b = \begin{bmatrix} 5 \\ 1 \end{bmatrix}$  
 
 $a \cdot b = 8 = a^Tb = b^Ta$
 
@@ -53,4 +52,5 @@ $a= \begin{bmatrix}1\\2\\3\\ \end{bmatrix}, \begin{Vmatrix}a\\\end{Vmatrix}=\sqr
 ### 1-norm
 $b = \begin{bmatrix}1\\2\\-3\\ \end{bmatrix}, \begin{Vmatrix}b\\\end{Vmatrix}= \left\vert 1 \right\vert^1 + \left\vert 2 \right\vert^1 +  \left\vert -3 \right\vert^1=6$
 
-### p-norm
+
+
