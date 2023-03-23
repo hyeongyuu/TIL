@@ -77,6 +77,6 @@ from airflow.models.baseoperator import cross_downstream
 # [op1, op2] >> op4
 cross_downstream([op1, op2], [op3, op4])
 ```
-
+---
 ## Reference
 https://airflow.apache.org/docs/apache-airflow/stable/core-concepts/dags.html
