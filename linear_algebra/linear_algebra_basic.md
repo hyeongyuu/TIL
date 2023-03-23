@@ -102,3 +102,8 @@ Null space는 row space와 수직한 space. dim(N(A)) + dim(R(A)) = n
 - full row rank 일 때, 해가 무한
 - full rank, 해가 한 개
 - rank-deficient 일 때, b가 C(A)에 들어있다면 무한, 들어있지 않으면 해가 없다.
+
+---
+## Reference
+https://losskatsu.github.io/categories/#linear-algebra  
+https://www.youtube.com/playlist?list=PL_iJu012NOxdZDxoGsYidMf2_bERIQaP0
