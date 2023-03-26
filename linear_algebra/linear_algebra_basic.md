@@ -1,4 +1,5 @@
-# Linear algebra
+# Linear algebra Basic
+
 ### 선형대수학이란?  
 행렬과 벡터에 대한 학문으로 선형방정식만으로 고차원의 수식을 표현  
 
@@ -102,6 +103,34 @@ Null space는 row space와 수직한 space. dim(N(A)) + dim(R(A)) = n
 - full row rank 일 때, 해가 무한
 - full rank, 해가 한 개
 - rank-deficient 일 때, b가 C(A)에 들어있다면 무한, 들어있지 않으면 해가 없다.
+
+### Determinant
+행렬을 대표하는 값으로 n x n (n은 2 이상)의 정방행렬 $ A $에 대해 다음과 같이 정의  
+$ detA = a_{11}detA_{11} - a_{12}detA_{12} + ... + (-1)^{1+n}detA_{1n} $
+#### Determinant properties
+1. $ detA=0 $ <=>  $ A $ is singular
+2. $ A $가 rank-deficient <=> $ detA=0 $
+3. For diagonal matrix, $ detA=a_{11}a_{22}...a_{nn} $
+4. For triangular matrix, $ detA=a_{11}a_{22}...a_{nn} $
+5. 항등행렬의 $ det=1 $
+6. $ detA^{T}=detA $
+7. $ detAB=detA detB $
+8. $ detA^{-1}=\frac{1}{detA} $ 
+9. $ detA=\lambda_{1}\lambda_{2}...\lambda_{n} $
+
+### Trace
+Diagonal element 합. Trace는 정사각행렬에 대해서만 정의  
+$ tr(A)=\displaystyle\sum_{i=1}^{n}a_{ii} $
+#### Trace properties
+1. $ tr(A+B)=tr{A}+tr(B) $
+2. $ tr(CA)=Ctr(A) $
+3. $ tr(A^{T})=tr(A) $
+4. $ tr(AB)=tr(BA) $
+5. $ tr(a^{T}b)=tr(ba^{T}) $
+6. $ tr(ABCD)=tr(BCDA)=tr(CDAB)=tr(DABC), tr(ABC) \neq tr(ACB) $-> Cyclic property
+
+### 최소자승법과 정사영 행렬
+
 
 ---
 ## Reference
