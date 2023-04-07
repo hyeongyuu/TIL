@@ -35,6 +35,25 @@ $Av-\lambda v=(A-\lambda I)v=0$
 
 
 ### 주성분 분석(PCA. Principal Component Analysis)
+주성분 분석의 목표는 데이터 차원을 축소(감소)시키는 것이다. 이때, 데이터를 벡터로 정사영시켜 차원을 축소시키고, 어떤 벡터로 정사영시켜야 기존 데이터의 속성을 가장 잘 유지(보존)할 수 있는지가 중요하다. 기존 데이터 속성을 유지한다는 말의 의미는 데이터 분포를 가장 잘 설명하는 방향을 찾는다고도 볼 수 있으며, 어떤 벡터로 정사영시켰을때 그 오차를 가장 작게 만드는 벡터(방향)가 최적의 벡터이다.
+
+PCA는 데이터의 변수가 $p$개, 관측치가 $n$개인 데이터 $X$로 새로운 변수 $z$를 만드는 과정. 즉, 새로운 벡터 $z$는 $X$를 $a_i$라는 새로운 축으로 사영시킨 결과물이다.
+$$
+\vec{z_1} = a_{11}\cdot \vec{x_1} + a_{12}\cdot \vec{x_2} + ... + a_{1p}\cdot \vec{x_p} = \vec{a_1}^TX\\
+\vec{z_2} = a_{21}\cdot \vec{x_1} + a_{12}\cdot \vec{x_2} + ... + a_{2p}\cdot \vec{x_p} = \vec{a_2}^TX\\
+...\\
+\vec{z_p} = a_{p1}\cdot \vec{x_1} + a_{p2}\cdot \vec{x_2} + ... + a_{pp}\cdot \vec{x_p} = \vec{a_p}^TX\\
+$$
+
+>고유벡터(eigenvector) 정의  
+$Av - \lambda v =  (A - \lambda I)v = 0$
+
+기존 데이터 $X$의 분산을 최대한 보존하는것이 PCA의 목적으로 변환된 데이터 $Z$의 분산 또한 최대화되어야 한다. 축소시키고자하는 차원의 수인 $p$의 계수벡터를 $\alpha$, $X$의 공분산행렬을 $\Sigma$라 두자. 최종적으로 $(\Sigma - \lambda)\vec{\alpha} = 0 $ 식을 도출할 수 있으며, 이는 고유벡터 정의에 의해 $\vec{\alpha}$는 행렬 $\Sigma$의 고유벡터이고 $\lambda$는 행렬 $\Sigma$의 고유값이 된다. 따라서 기존 데이터 $X$의 분산을 최대화하는 $\vec{\alpha}$는 행렬$\Sigma$의 고유벡터라는 사실을 알 수 있으며, $\vec{\alpha}$를 주성분이라고 한다.
+
+<!-- PCA AE(AutoEncoder)
+PCA. 선형변환
+AE. 비선형변환 -->
+
 
 ### 특이값 분해(SVD. Sigular Vector Decomposition)
 
