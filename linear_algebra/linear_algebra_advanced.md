@@ -19,7 +19,7 @@ $Av-\lambda v=(A-\lambda I)v=0$
 행렬식이 0이라는 것은 행렬을 구성하는 벡터가 영벡터가 아닌데 각 벡터로 구성된 도형의 부피가 0이라는 사실 -> 행렬을 구성하는 벡터가 서로 동일선상(colinear)에 있다는 것을 의미
 
 
-### 고유값 분해(Eigendecomposition)
+### 고유값 분해(Eigen Decomposition)
 행렬 $A$(2x2)가 고유값(eigenvalue), 고유벡터(eigenvector)를 2개씩 갖는다면 $A_{v1}=\lambda_{1}v_{1}$, $A_{v2}=\lambda_{2}v_{2}$ 만족한다. 여기서 $A[v_1, v_2] = [\lambda_{1}v_{1}, \lambda_{2}v_{2}]$ 로 변환하고, 우변의 $[\lambda_1, \lambda_2]$를 대각행렬(diagonal matrix)로 변환하여 $A = V\Lambda V^{-1}$라는 식을 도출한다. 이를 A를 고유값 분해(eigendecomposition)한다고 표현한다.
 
 앞의 식($A = V\Lambda V^{-1}$)을 변형하여 $V^{-1}AV = \Lambda$를 도출하고, 여기서 $A$는 대각행렬(diagonal matrix)$\Lambda$로 표현 할 수 있으며, 이를 diagonalizable이라 한다. 그리고 고유값 분해(eigendecompsition)가 가능한 행렬을 diagonalizable하다고 하며, independent한 eigenvector가 n개 있다.
@@ -38,11 +38,14 @@ $Av-\lambda v=(A-\lambda I)v=0$
 주성분 분석의 목표는 데이터 차원을 축소(감소)시키는 것이다. 이때, 데이터를 벡터로 정사영시켜 차원을 축소시키고, 어떤 벡터로 정사영시켜야 기존 데이터의 속성을 가장 잘 유지(보존)할 수 있는지가 중요하다. 기존 데이터 속성을 유지한다는 말의 의미는 데이터 분포를 가장 잘 설명하는 방향을 찾는다고도 볼 수 있으며, 어떤 벡터로 정사영시켰을때 그 오차를 가장 작게 만드는 벡터(방향)가 최적의 벡터이다.
 
 PCA는 데이터의 변수가 $p$개, 관측치가 $n$개인 데이터 $X$로 새로운 변수 $z$를 만드는 과정. 즉, 새로운 벡터 $z$는 $X$를 $a_i$라는 새로운 축으로 사영시킨 결과물이다.
-$$
+
+<!-- $$
 \vec{z_1} = a_{11}\cdot \vec{x_1} + a_{12}\cdot \vec{x_2} + ... + a_{1p}\cdot \vec{x_p} = \vec{a_1}^TX\\
 \vec{z_2} = a_{21}\cdot \vec{x_1} + a_{12}\cdot \vec{x_2} + ... + a_{2p}\cdot \vec{x_p} = \vec{a_2}^TX\\
-...\\
-\vec{z_p} = a_{p1}\cdot \vec{x_1} + a_{p2}\cdot \vec{x_2} + ... + a_{pp}\cdot \vec{x_p} = \vec{a_p}^TX\\
+...\\ -->
+
+$$
+\vec{z_p} = a_{p1}\cdot \vec{x_1} + a_{p2}\cdot \vec{x_2} + ... + a_{pp}\cdot \vec{x_p} = \vec{a_p}^TX
 $$
 
 >고유벡터(eigenvector) 정의  
@@ -55,6 +58,19 @@ PCA. 선형변환
 AE. 비선형변환 -->
 
 
-### 특이값 분해(SVD. Sigular Vector Decomposition)
+### 특이값 분해(SVD. Sigular Value Decomposition)
+SVD는 임의의 $m \times n$차원의 행렬 $A$를 $A = U \Sigma V^T$로 행렬 분해하는 방법 중 하나이다. 고유값 분해(Eigen decomposition)의 1. 행렬 $n \times n$(Square matrix)만 분해 가능, 2. Symmetric한 행렬만 분해 가능하다는 한계점을 극복했다.
 
-### 의사역행렬
+행렬 $A(m \times n)$를 SVD로 분해한 행렬의 특징은 다음과 같다.
+- $U(m \times m)$ orthogonal matrix
+- $\Sigma(m \times n)$ diagonal matrix
+- $V(n \times n)$ orthogonal matrix
+
+행렬 $A$를 직교하는 두 벡터 $\vec{x}, \vec{y}$에 대해 동시에 선형변환을 시켜본다면, 결과는 $A\vec{x}, A\vec{y}$일 것이다. 그리고 선형변환 결과인 $A\vec{x}$와 $A\vec{y}$가 직교하게 되는 경우는 한 번이 아닐것이고, 이는 새로운 벡터 $\vec{u}_1, \vec{u}_2$로 나타낼 수 있다.
+
+선형변환의 관점에서 네 개의 행렬($A, V, \Sigma, U$) 관계를 정의하면 $AV = U\Sigma$와 같이 표현할 수 있다. 벡터 $V$에 선형변환 행렬 $A$를 취하면, 새로운 행렬 $U$에 scaling factor를 갖는 대각행렬 $\Sigma$을 취한 것과 같다. 즉, $V$에 있는 열벡터를 행렬 $A$를 통해 선형변환 할 때, 그 크기는 $\Sigma$만큼 변하지만, 여전히 직교하는 벡터 $U$를 찾는 것이다.
+
+SVD로 임의의 행렬 $A$를 $A$와 동일한 크기를 갖는 여러개의 행렬로 분해해서 생각할 수 있는데, 분해된 각 행렬의 크기는 $\Sigma$의 크기에 의해 결정된다. SVD를 이용해 임의의 행렬 A를 정보량($\Sigma$)에 따라 여러 벡터로 분할하여 생각할 수 있다.
+
+
+<!-- ### 의사역행렬 -->
