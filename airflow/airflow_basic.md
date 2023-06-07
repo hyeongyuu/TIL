@@ -9,6 +9,7 @@ dags_folder = /airflow/dags
 default_timezone = Asia/Seoul 
 default_ui_timezone = Asia/Seoul 
 load_example = False # remove example
+load_default_connections = False
 ```
 Airflow 초기 세팅을 위한 config 파일 수정
 - dags 디렉토리 설정
